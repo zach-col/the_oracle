@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<title>The Oracle</title>
+	<style>
+  body {
+      font-family: cursive, bold;
+      background-color: blue;
+      color: white;
+      text-align: center;
+      background: url('http://vignette3.wikia.nocookie.net/matrix/images/d/df/The_Oracle_and_Neo_on_Bench.jpg/revision/latest?cb=20130121190912')no-repeat center fixed;
+      background-size: cover;
+  }
+	h2{
+		color:green;
+    margin-top: 20%;
+	}
+
+	.red{
+		color: red;
+	}
+  /* changing all text background colors */
+  h1,h2, .red{
+    background-color: white; /* backup color */
+    background-color: rgba(255,255,255,0.5);
+  }
+	</style>
+</head>
+<body>
+	<script>
+
+var question = prompt("The Oracle says, what is your question Neo");
+var howTo;
+var whatIs;
+var space = "<br>"
+
+switch (question) {
+  case "javascript if function":
+  case "javascript function":
+  case "How to make a javascript if function":
+  	howTo = "<h1>To make a Javascript if function type: if( 1 == 1){console.log(1)}</h1>"
+  	whatIs ="<h2>A javascript if function is used to compare the input then output the information needed</h2>"
+    break;
+    
+  case "javascript variable":
+  case "javascript var":
+  case "How to make a javascript variable":
+  	howTo = "<h1>To make a Javascript variable type: var taco = 'meat'</h1>"
+  	whatIs ="<h2>A javascript variable  is used  to stored data</h2>"
+    break;
+    
+  case "javascript array":
+  case "javascript list":
+  case "How to make a javascript array":
+  	howTo = "<h1>To make a Javascript array type: var colors = [blue','red','orange']</h1>"
+  	whatIs ="<h2>A javascript array is used to store any data types</h2>"
+    break;
+/* git */
+  case "git flow":
+  case "git tut":
+  case "git tutorial":
+  	howTo = "<h1>The git flow is: git clone 'urlToClone', git init, git add ., git commit-m 'added new files', git push -u origin master</h1>"
+  	whatIs ="<h2>The git flow is used to show what is needed to use git</h2>"
+    break;
+
+  case "git commit":
+  case "git commit -m":
+  case "git comment":
+  	howTo = "<h1>To make a git commit: git commit -m 'changed file'</h1>"
+  	whatIs ="<h2>A git commit is used to make a comment on the files you are changing </h2>"
+    break;
+  default:
+    howTo = "<h1 class='red'>You dont know this? aghhhh</h1>";
+    whatIs = "<h2>You must already know this I am not going to tell you</h2>"
+}
+document.write(howTo, space, whatIs)
+	</script>
+</body>
+</html>
