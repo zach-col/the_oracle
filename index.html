@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home-1st Class</title>
+  <title>The Oracle</title>
     <!-- Bootstrap cdn -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<title>The Oracle</title>
@@ -39,9 +39,20 @@
     background-color: rgba(255,255,255,0.5);
     padding-bottom: 2%;
   }
+
+ol, ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 30px;
+    padding-top: 20px;
+}
+ol li{
+    margin-top: 20px;
+}
 	</style>
 </head>
 <body>
+<div class="container">
 	<script>
 
 var question = prompt("The Oracle says, what is your Question Neo?........");
@@ -84,6 +95,13 @@ switch (question) {
   	howTo = "<h1>To make a git commit: git commit -m 'changed file'</h1>"
   	whatIs ="<h2>A git commit is used to make a comment on the files you are changing </h2>"
     break;
+  case "angular tut":
+  case "angular tutorial":
+  case "angular hello world":
+	howTo ="<h1>To make a angular hello world follow these steps</h1>"
+	whatIs = "<ol> <li>Create a folder called hello_world</li> <li>Create a folder inside hello_world called js</li> <li>Create a file in hello_world called index.html with a basic html setup</li> <li> Inside index.html add the angular cdn to the header inside a script tag https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js</li> <li>Inside the folder js create a file called app.js add this code to the file var app = angular.module('myApp', []);</li> <li>Now go to your index.html file and add this to the body tag ng-app='myApp'</li> <li> Add this to the bottom of index.html   <body ng-app='myApp'> to bring in your app add a script src to  'js/app.js'</li> <li>Create a folder inside of js called controllers</li> <li>Inside of the folder controllers creat a file called MainController.js </li> <li>Inside the file MainController.js add this code app.controller('MainController', ['$scope', function($scope) { $scope.title = 'Hello world'; }]); </li> <li>Go to index.html and add a script src to use the  controller js/controllers/MainController.js</li> <li>Now in index.html add you controller to the body tag by adding this ng-controller='MainController' </li> <li>Now in index.html make a h1 tag that looks like this h1{{ title }}h1 <li>Cool it worked</li></ol>"
+    break;
+
   default:
     howTo = "<h1 class='red'>You dont know this? aghhhh</h1>";
     whatIs = "<h2>You must already know this I am not going to tell you</h2>"
@@ -92,5 +110,6 @@ switch (question) {
   document.write(howTo, space, whatIs)
 
 	</script>
+</div>
 </body>
 </html>
